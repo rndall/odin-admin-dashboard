@@ -65,6 +65,7 @@ h6 {
 	--accent-color: hsl(201.18deg 78.9% 46.47%);
 	--light: hsl(0deg 0% 100%);
 	--dark: hsl(0deg 0% 0%);
+	--search-input-bg-color: hsl(214.29deg 31.82% 91.37%);
 	--main-bg-color: hsl(214.29deg 31.82% 91.37%);
 	--project-icon-color: hsl(0deg 0% 20%);
 	--project-card-accent: hsl(41.91deg 86.9% 55.1%);
@@ -136,13 +137,21 @@ body {
 	width: 50px;
 }
 
+.header {
+	display: grid;
+	gap: 24px;
+	padding: 16px 56px;
+	box-shadow: 0 3px 5px hsl(0deg 0% 75%);
+	z-index: 10;
+}
+
 .header__item {
 	display: grid;
 	align-items: center;
 }
 
 .header__item:first-of-type {
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 3fr max-content;
 	gap: 128px;
 }
 
@@ -160,20 +169,75 @@ body {
 
 .header__search {
 	grid-template-columns: auto 1fr;
+	gap: 16px;
+}
+
+.header__search-input {
+	border: none;
+	background-color: var(--search-input-bg-color);
+	border-radius: 9999px;
+	height: 30px;
+	padding-inline: 12px;
+	font-size: .875rem;
 }
 
 .header__profile {
 	grid-template-columns: repeat(3, auto);
+	gap: 28px;
+	margin-right: 32px;
+}
+
+.header__icon {
+	width: 25px;
+	height: 25px;
+}
+
+.header__name {
+	font-weight: bold;
 }
 
 .header__user {
 	grid-template-columns: auto 1fr;
+	gap: 24px;
+}
+
+.header__user-image {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 9999px;
+}
+
+.header__user-image--size-big {
+	width: 75px;
+	height: 75px;
+}
+
+.header__text {
+	font-weight: bold;
+}
+
+.header__greeting {
+	font-size: .875rem;
+}
+
+.header__user-handle {
+	font-size: 1.5rem;
 }
 
 .header__buttons {
-	grid-template-columns: repeat(3, min-content);
+	grid-template-columns: repeat(3, 1fr);
 	justify-self: end;
-	gap: 24px;
+	gap: 28px;
+}
+
+.header__button {
+	background-color: var(--accent-color);
+	border: none;
+	color: var(--light);
+	font-weight: bold;
+	border-radius: 9999px;
+	padding: 8px 24px;
 }
 
 .main {
