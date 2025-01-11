@@ -61,6 +61,16 @@ h6 {
 	isolation: isolate;
 }
 
+:root {
+	--accent-color: hsl(201.18deg 78.9% 46.47%);
+	--light: hsl(0deg 0% 100%);
+	--dark: hsl(0deg 0% 0%);
+	--main-bg-color: hsl(214.29deg 31.82% 91.37%);
+	--project-icon-color: hsl(0deg 0% 20%);
+	--project-card-accent: hsl(41.91deg 86.9% 55.1%);
+	--p-color: hsl(0deg 0% 38.82%);
+}
+
 body {
 	display: grid;
 	grid-template-columns: 300px 1fr;
