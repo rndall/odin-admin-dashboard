@@ -60,3 +60,13 @@ h6 {
 #__next {
 	isolation: isolate;
 }
+
+body {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	height: 100dvh;
+}
+
+.aside {
+	grid-row: 1 / 3;
+}
