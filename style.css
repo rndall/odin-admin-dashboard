@@ -70,6 +70,7 @@ h6 {
 	--project-icon-color: hsl(0deg 0% 20%);
 	--project-card-accent: hsl(41.91deg 86.9% 55.1%);
 	--p-color: hsl(0deg 0% 38.82%);
+	--announcement-separator-color: hsl(0deg 0% 82.35%);
 }
 
 body {
@@ -243,7 +244,7 @@ body {
 .main {
 	display: grid;
 	grid-template-columns: 2.75fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: repeat(2, auto);
 	background-color: var(--main-bg-color);
 	padding: 32px 32px 32px 20px;
 	gap: 24px;
@@ -304,6 +305,23 @@ body {
 	fill: var(--project-icon-color);
 }
 
-.main__announcements-container {
-	background-color: var(--light);
+.main__card--announcements {
+	padding: 20px 36px;
+	margin-top: 8px;
+}
+
+.main__card--announcements > div {
+	padding-block: 16px;
+}
+
+.main__card--announcements > div:not(:nth-of-type(1)) {
+	border-top: 1px solid var(--announcement-separator-color);
+}
+
+.main__title--announcements {
+	font-size: 1rem;
+}
+
+.main__description--announcements {
+	font-size: .875rem;
 }
