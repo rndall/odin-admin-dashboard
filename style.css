@@ -89,11 +89,12 @@ body {
 }
 
 .aside__icon {
-	width: 50px;
+	width: 25px;
+	fill: var(--light);
 }
 
-.aside__nav-icon {
-	width: 25px;
+.aside__icon--size-big {
+	width: 50px;
 }
 
 .header__item {
