@@ -258,7 +258,7 @@ body {
 	font-size: 1.25rem;
 }
 
-.main__container {
+.main__projects-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 28px;
@@ -267,12 +267,13 @@ body {
 
 .main__project-card {
 	background-color: var(--light);
-	padding: 36px 20px;
+	padding: 28px 20px;
 	border-radius: 8px;
 	border-left: 8px solid var(--project-card-accent);
 	display: grid;
 	align-content: space-between;
 	gap: 16px;
+	box-shadow: 3px 3px 3px hsl(0deg 0% 80%);
 }
 
 .main__project-title {
